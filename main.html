@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Platform</h1>
+        
+        <div id="create-quiz">
+            <h2>Create Quiz</h2>
+            <form id="quiz-form">
+                <div id="questions-container">
+                    <div class="question-block">
+                        <label>Question: <input type="text" name="question" required></label>
+                        <label>Option A: <input type="text" name="optionA" required></label>
+                        <label>Option B: <input type="text" name="optionB" required></label>
+                        <label>Option C: <input type="text" name="optionC" required></label>
+                        <label>Option D: <input type="text" name="optionD" required></label>
+                        <label>Correct Answer: 
+                            <select name="correctAnswer" required>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <button type="button" id="add-question">Add Question</button>
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </div>
+        
+        <div id="take-quiz" style="display:none;">
+            <h2>Take Quiz</h2>
+            <form id="quiz-take-form">
+                <div id="quiz-questions"></div>
+                <button type="submit">Submit Answers</button>
+            </form>
+        </div>
+        
+        <div id="results" style="display:none;">
+            <h2>Quiz Results</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
